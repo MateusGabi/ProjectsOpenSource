@@ -1,6 +1,6 @@
 /*
  
- Versão numero 2.2
+ Versão 2.2.2
  
  
  @author Mateus Gabi    [@matgabi17 on Twitter]
@@ -39,46 +39,46 @@ function criarUnico() {
 }
 
 var w = [
-//[Susbstantivo Comum], [Substantivo Próprio], [adjetivo], [advérbio], [verbo]
-"amor", "Amanda", "amigável", "ante-ontem",
-"banana", "Bruna", "baixinho", "bastante",
-"coração", "Carla", "carinhosa", "carinhosamente",
-"dedo", "Diego", "devagar",
-"esquerdo", "Eduardo", "esquerdo", "estudar",
-"faca", "Fabiana", "fácil", "facilmente", "ficar",
-"goiabada", "Goiás", "gostosa", "gritar",
-"homem", "Hungria", "hoje",
-"igreja", "Iara", "ignorante",
-"joaninha", "João", "jurássico", "jamais",
-"Keila",
-"limão", "Luísa", "lituano",
-"maneta", "Mateus", "memorável", "muito",
-"navio", "Naiara", "nunca", "natal", "nascer",
-"oligarquia", "Osório",
-"patinho", "Pedro", "preto",
-"queijo",
-"rua", "Raíssa", "ruiva",
-"salada", "Silvia",
-"tecnologia", "Thiago",
-"urso", "Úrsula", "unha",
-"vegano", "Vitória", "verde", "vencedor",
-"Wellington",
-"xadrez", "Xico",
-"Ygritte",
-"zebra",
-"abano",
-"boliche",
-"chuchu",
-"divindade",
-"espelho",
-"festança",
-"gigante",
-"hospital",
-"indubitável",
-"jato",
-"liquidificar",
-"namorar"
-];
+    //[Susbstantivo Comum], [Substantivo Próprio], [adjetivo], [advérbio], [verbo]
+    "amor", "Amanda", "amigável", "ante-ontem",
+    "banana", "Bruna", "baixinho", "bastante",
+    "coração", "Carla", "carinhosa", "carinhosamente",
+    "dedo", "Diego", "devagar",
+    "esquerdo", "Eduardo", "esquerdo", "estudar",
+    "faca", "Fabiana", "fácil", "facilmente", "ficar",
+    "goiabada", "Goiás", "gostosa", "gritar",
+    "homem", "Hungria", "hoje",
+    "igreja", "Iara", "ignorante",
+    "joaninha", "João", "jurássico", "jamais",
+    "Keila",
+    "limão", "Luísa", "lituano",
+    "maneta", "Mateus", "memorável", "muito",
+    "navio", "Naiara", "nunca", "natal", "nascer",
+    "oligarquia", "Osório",
+    "patinho", "Pedro", "preto",
+    "queijo",
+    "rua", "Raíssa", "ruiva",
+    "salada", "Silvia",
+    "tecnologia", "Thiago",
+    "urso", "Úrsula", "unha",
+    "vegano", "Vitória", "verde", "vencedor",
+    "Wellington",
+    "xadrez", "Xico",
+    "Ygritte",
+    "zebra",
+    "abano",
+    "boliche",
+    "chuchu",
+    "divindade",
+    "espelho",
+    "festança",
+    "gigante",
+    "hospital",
+    "indubitável",
+    "jato",
+    "liquidificar",
+    "namorar"
+    ];
 
 function printarFrase() {
 
@@ -90,6 +90,7 @@ function printarFrase() {
 
         // função para encontrar elemento no vetor
         // f será o indice
+        
         var f = i * a - b + i * c - d;
 
         // if (f > w.length || f < 0) {
@@ -98,9 +99,9 @@ function printarFrase() {
         //     retorno += " " + w[f];
         // }
 
-        if (f < w.length || f > 0) {
+        if (f > 0 && f < w.length) {
             retorno += " " +w[f];
-        };
+        }
 
     }
 
