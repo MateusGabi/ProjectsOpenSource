@@ -1,40 +1,46 @@
 /*
  
- Versão 2.2.2
- 
+ Versão 2.2.3 
  
  @author Mateus Gabi    [@matgabi17 on Twitter]
- @author Renan Benatti
+ @author Renan Benatti  [@renanbdias on Twitter]
  
  */
 
-// Valores únicos
+//  'a', 'b', 'c' e 'd' são variáveis do tipo 'integer' e recebem valores sorteados;
+//  'a', 'b', 'c' and 'd' are 'integer' variables and receives a randon number;
 
 var a = criarUnico();
 var b = criarUnico();
 var c = criarUnico();
 var d = criarUnico();
 
-//Limitante
+//  Valor limite de prints de palavras, ou seja, a Ameda printará entre 0 e 7 palavras;
+//  Number max of words;
 var e = 7;
 
-// Função que retorna um número aleatório
-function criarUnico() {
+//  Função que retorna um número aleatório
+function criarUnico()
+{
 
     var sorteados = [];
     var valorMaximo = 8;
 
-    if (sorteados.length == valorMaximo) {
+    if (sorteados.length == valorMaximo)
+    {
         if (confirm('#'))
             sorteados = [];
         else
             return;
     }
+
     var sugestao = Math.ceil(Math.random() * valorMaximo);
-    while (sorteados.indexOf(sugestao) >= 0) {
+
+    while (sorteados.indexOf(sugestao) >= 0)
         sugestao = Math.ceil(Math.random() * valorMaximo);
-    }
+
     sorteados.push(sugestao);
+
     return sugestao;
 }
 
@@ -64,7 +70,7 @@ var w = [
     "vegano", "Vitória", "verde", "vencedor",
     "Wellington",
     "xadrez", "Xico",
-    "Ygritte",
+    "Ygritte", 
     "zebra",
     "abano",
     "boliche",
@@ -80,11 +86,13 @@ var w = [
     "namorar"
     ];
 
-function printarFrase() {
+function printarFrase()
+{
 
     var retorno = "";
 
-    for (i = 0; i < e; i++) {
+    for (i = 1; i <= e; i++)
+    {
 
         //var w[] = getWords();
 
@@ -99,35 +107,39 @@ function printarFrase() {
         //     retorno += " " + w[f];
         // }
 
-        if (f > 0 && f < w.length) {
-            retorno += " " +w[f];
-        }
+        if (f > 0 && f < w.length)
+            retorno += " " +w[f]
 
     }
 
     return document.getElementById('frase').innerHTML = retorno;
 }
 
-function printarWordsStatus() {
+// Resultado Inteiro em Trilhões
+
+function printarWordsStatus()
+{    
     var p = 0;
 
-    for (var i = 1; i <= e; i++) {
+    for (var i = 1; i <= e; i++)
         p += Math.pow(w.length, i);
-    }
 
-    p = parseInt(p / Math.pow(10, 12)); // Resultado Inteiro em Trilhões
+    p = parseInt(p / Math.pow(10, 12));
 
     // p = parseInt(p);
 
     return document.getElementById("statusWord").innerHTML = w.length + " words available and " + p + "T+ possibilities!";
 }
 
-function combinations() { 
-    var p = 0;
+// We don't need it
 
-    for (var i = 1; i <= e; i++) {
-        p += Math.pow(w.length, i);
-    }
+// function combinations()
+// {
 
-    return p;
-}
+//     var p = 0;
+
+//     for (var i = 1; i <= e; i++)
+//         p += Math.pow(w.length, i);
+
+//     return p;
+// }
